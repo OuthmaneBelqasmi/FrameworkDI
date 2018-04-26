@@ -11,7 +11,7 @@ public class test {
 		inject.Init("dao","metier");
 		IMetier metier = (IMetier) inject.getBean("IMetier");
 		System.out.println(metier.calcule());
-		System.out.println("com");
+		System.out.println("com     ");
 
 		
 
