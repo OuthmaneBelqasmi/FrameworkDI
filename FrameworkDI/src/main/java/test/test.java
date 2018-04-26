@@ -11,7 +11,9 @@ public class test {
 		inject.Init("dao","metier");
 		IMetier metier = (IMetier) inject.getBean("IMetier");
 		System.out.println(metier.calcule());
-		//update ok
+		System.out.println("commit work");
+
+		
 
 	}
 	
