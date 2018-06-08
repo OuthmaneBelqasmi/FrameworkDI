@@ -81,7 +81,7 @@ public class MetierImple {
 ```
 Main test:
 <br>
-The __init__ method will scan all  packages that it receives in parameter and then the framwork will automatically search about annotation in classes and fields.
+The __InitBean__ method will scan all  packages that it receives in parameter and then the framwork will automatically search about annotation in classes and fields.
 The __getBean(IDAO.class)__ will return the instance of class that implement IDAO interface 
 
 
@@ -89,8 +89,8 @@ The __getBean(IDAO.class)__ will return the instance of class that implement IDA
 public class main {
 	public static void main(String[] args){
 
-		AnnotationBeanInject inject = new AnnotationBeanInject();
-		inject.Init("dao");
+		BeanContainer inject = new BeanContainer();
+		inject.InitBean("dao");
 		IDAO dao=(IDAO) inject.getBean(IDAO.class);	
 	}
 }
