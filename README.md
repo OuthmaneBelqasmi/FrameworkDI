@@ -6,7 +6,7 @@ This project is PoC (Proof of Concept) of Dependency Injection in java using two
 1- XML File configuration<br>
 2- Annotation
 
-for xml file configuration the framwork inject the field using setter method and the introspection for the annotation.
+NB : for xml file configuration the framwork inject the field using setter method and for the annotation the framework use  the introspection.
 
 <hr>
 
