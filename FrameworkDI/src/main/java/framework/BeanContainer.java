@@ -10,12 +10,12 @@ import java.util.Map;
 
 
 
-public class AnnotationBeanInject{
+public class BeanContainer{
     private Map<String, Object> AnnotationMapObject = new HashMap<String, Object>();
     ArrayList<String> path = new ArrayList<String>();
     ArrayList<File> packageList = new ArrayList<File>();
 
-	public void Init(String ... pckg)  throws ExceptionBean
+	public void InitBean(String ... pckg)  throws ExceptionBean
 	{
 	    ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 		for (String p : pckg)
@@ -44,21 +44,17 @@ public class AnnotationBeanInject{
             							 field.set(obj,getBean(field.getType().getSimpleName())); 
             						 }
 								}					
-        						 //throw an exception if there is more than class that implement the interface
         						 if(AnnotationMapObject.containsKey(c[0].getSimpleName())){
-        							 throw new ExceptionBean("Exception : Plusieure classe implement l'interface "+c[0].getSimpleName());
-
+        			throw new ExceptionBean("Exception : Plusieure classe implement l'interface "
+        						 +c[0].getSimpleName());
         						 }else  AnnotationMapObject.put(c[0].getSimpleName(),obj);
-	    					}
-
-	    				}
+	    					}}
 					} catch (Exception e) {
 						System.out.println(e.getMessage());
 					}
 	    			} 
 			}
-	    }
-	}
+	    }}
 	 public Object getBean(Class clc) {
 		    
 	        Object obj = AnnotationMapObject.get(clc.getSimpleName());

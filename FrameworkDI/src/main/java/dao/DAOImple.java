@@ -10,3 +10,7 @@ public class DAOImple implements IDAO {
 		return data;
 	}
 }
+
+
+
+
