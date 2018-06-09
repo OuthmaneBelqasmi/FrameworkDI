@@ -64,8 +64,6 @@ public class BeanContainer{
     public Object getBean(String beanName) {
     
         Object obj = AnnotationMapObject.get(beanName);
-       // System.out.println(clc.getSimpleName());
-
         return obj;
     }
 }
