@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="d" class="dao.DAOImple"></bean>
+	<bean id="metier" class="metier.MetierImple">
+		<property name="dao" ref="d"></property>
+	</bean>
+</beans>
